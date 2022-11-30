@@ -23,7 +23,7 @@ namespace Api.Data.Test
         {
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddDbContext<MyContext>(o =>
-                o.UseSqlServer($"Server=.\\SQLEXPRESS;Initial Catalog={dataBaseName}Trusted_Connection=True;MultipleActiveResultSets=true")
+                o.UseSqlServer($"Server=.\\SQLEXPRESS;Initial Catalog={dataBaseName};Trusted_Connection=True;MultipleActiveResultSets=true")
                 , ServiceLifetime.Transient);
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
