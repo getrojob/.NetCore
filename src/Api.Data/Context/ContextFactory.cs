@@ -1,4 +1,3 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -10,12 +9,12 @@ namespace Api.Data.Context
         {
             // Usado para criar as Migrações em tempo de designer da aplicação
 
-            //var connectionString = "Server=.\\SQLEXPRESS;Initial Catalog=dbAPI_2;Trusted_Connection=True;MultipleActiveResultSets=true";
-            var connectionString = "Server=localhost;Port=3306;Database=dbAPI2;Uid=root;Pwd=vetrigo";
+            var connectionString = "Server=.\\SQLEXPRESS;Initial Catalog=dbAPI_3;Trusted_Connection=True;MultipleActiveResultSets=true";
+            //var connectionString = "Server=localhost;Port=3306;Database=dbAPI2;Uid=root;Pwd=vetrigo";
 
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
-            optionsBuilder.UseMySql(connectionString);
-            //optionsBuilder.UseSqlServer(connectionString);
+            //optionsBuilder.UseMySql(connectionString);
+            optionsBuilder.UseSqlServer(connectionString);
             return new MyContext(optionsBuilder.Options);
         }
     }
