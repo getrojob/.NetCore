@@ -20,7 +20,11 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "DB_CONNECTION": "Server=.\\SQLEXPRESS;Initial Catalog=dbAPI_3;Trusted_Connection=True;MultipleActiveResultSets=true",
+                "DB_CONNECTION2": "Server=localhost;Port=3306;Database=dbAPI2;Uid=root;Pwd=vetrigo",
+                "DATABASE": "SQLSERVER",
+                "MIGRATION": "APLICAR"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
