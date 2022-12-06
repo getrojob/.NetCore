@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Api.Domain.Dtos.User;
 using Api.Domain.Entities;
 using Api.Domain.Interfaces;
 using Api.Domain.Interfaces.Services.User;
 using Api.Domain.Models;
 using AutoMapper;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Api.Service.Services
 {

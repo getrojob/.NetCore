@@ -1,10 +1,10 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Api.Data.Context;
 using Api.Data.Implementations;
 using Api.Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Api.Data.Test
@@ -12,6 +12,7 @@ namespace Api.Data.Test
     public class UsuarioCrudCompleto : BaseTest, IClassFixture<DbTeste>
     {
         private ServiceProvider _serviceProvide;
+
         public UsuarioCrudCompleto(DbTeste dbTeste)
         {
             _serviceProvide = dbTeste.ServiceProvider;

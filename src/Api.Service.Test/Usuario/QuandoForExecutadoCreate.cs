@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
 using Api.Domain.Interfaces.Services.User;
 using Moq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Api.Service.Test.Usuario

@@ -1,7 +1,7 @@
-using System;
 using Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Api.Data.Test
 {
@@ -9,7 +9,6 @@ namespace Api.Data.Test
     {
         public BaseTest()
         {
-
         }
     }
 
@@ -32,6 +31,7 @@ namespace Api.Data.Test
                 context.Database.EnsureCreated();
             }
         }
+
         public void Dispose()
         {
             using (var context = ServiceProvider.GetService<MyContext>())

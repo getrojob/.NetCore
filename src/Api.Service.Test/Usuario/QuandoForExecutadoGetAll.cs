@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Api.Domain.Dtos.User;
 using Api.Domain.Interfaces.Services.User;
 using Moq;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Api.Service.Test.Usuario
@@ -32,7 +32,6 @@ namespace Api.Service.Test.Usuario
             var _resultEmpty = await _service.GetAll();
             Assert.Empty(_resultEmpty);
             Assert.True(_resultEmpty.Count() == 0);
-
         }
     }
 }

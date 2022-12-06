@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Api.Data.Context;
 using Api.Domain.Entities;
 using Api.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Api.Data.Repository
 {
@@ -12,11 +12,13 @@ namespace Api.Data.Repository
     {
         protected readonly MyContext _context;
         private DbSet<T> _dataset;
+
         public BaseRepository(MyContext context)
         {
             _context = context;
             _dataset = _context.Set<T>();
         }
+
         public async Task<bool> DeleteAsync(Guid id)
         {
             try
@@ -30,7 +32,6 @@ namespace Api.Data.Repository
                 _dataset.Remove(result);
                 await _context.SaveChangesAsync();
                 return true;
-
             }
             catch (Exception ex)
             {
@@ -56,7 +57,6 @@ namespace Api.Data.Repository
                 _dataset.Add(item);
 
                 await _context.SaveChangesAsync();
-
             }
             catch (Exception ex)
             {
@@ -105,7 +105,6 @@ namespace Api.Data.Repository
 
                 _context.Entry(result).CurrentValues.SetValues(item);
                 await _context.SaveChangesAsync();
-
             }
             catch (Exception ex)
             {
