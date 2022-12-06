@@ -1,7 +1,7 @@
-using System;
-using System.Threading.Tasks;
 using Api.Domain.Interfaces.Services.User;
 using Moq;
+using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Api.Service.Test.Usuario
@@ -27,8 +27,6 @@ namespace Api.Service.Test.Usuario
 
             deletado = await _service.Delete(Guid.NewGuid());
             Assert.False(deletado);
-
         }
     }
-
 }

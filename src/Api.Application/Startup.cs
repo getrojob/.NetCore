@@ -1,20 +1,20 @@
-using System;
 using Api.CrossCutting.DependencyInjection;
+using Api.CrossCutting.Mapping;
+using Api.Data.Context;
 using Api.Domain.Security;
+using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System;
 using System.Collections.Generic;
-using Api.CrossCutting.Mapping;
-using AutoMapper;
-using Api.Data.Context;
-using Microsoft.EntityFrameworkCore;
 
 namespace application
 {
@@ -162,7 +162,6 @@ namespace application
                         context.Database.Migrate();
                     }
                 }
-
             }
         }
     }

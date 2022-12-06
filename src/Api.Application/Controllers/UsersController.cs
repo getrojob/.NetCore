@@ -1,11 +1,10 @@
-using System;
-using System.Net;
-using System.Threading.Tasks;
 using Api.Domain.Dtos.User;
 using Api.Domain.Interfaces.Services.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using System;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace Api.Application.Controllers
 {
@@ -15,6 +14,7 @@ namespace Api.Application.Controllers
     public class UsersController : ControllerBase
     {
         public IUserService _service { get; set; }
+
         public UsersController(IUserService service)
         {
             _service = service;

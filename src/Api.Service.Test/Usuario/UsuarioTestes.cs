@@ -1,6 +1,6 @@
+using Api.Domain.Dtos.User;
 using System;
 using System.Collections.Generic;
-using Api.Domain.Dtos.User;
 
 namespace Api.Service.Test.Usuario
 {
@@ -73,8 +73,6 @@ namespace Api.Service.Test.Usuario
                 Email = EmailUsuarioAlterado,
                 UpdateAt = DateTime.UtcNow
             };
-
         }
     }
 }
-

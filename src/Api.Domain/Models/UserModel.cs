@@ -5,6 +5,7 @@ namespace Api.Domain.Models
     public class UserModel
     {
         private Guid _id;
+
         public Guid Id
         {
             get { return _id; }
@@ -12,6 +13,7 @@ namespace Api.Domain.Models
         }
 
         private string _name;
+
         public string Name
         {
             get { return _name; }
@@ -19,6 +21,7 @@ namespace Api.Domain.Models
         }
 
         private string _email;
+
         public string Email
         {
             get { return _email; }
@@ -26,6 +29,7 @@ namespace Api.Domain.Models
         }
 
         private DateTime _createAt;
+
         public DateTime CreateAt
         {
             get { return _createAt; }
@@ -33,6 +37,7 @@ namespace Api.Domain.Models
         }
 
         private DateTime _updateAt;
+
         public DateTime UpdateAt
         {
             get { return _updateAt; }
