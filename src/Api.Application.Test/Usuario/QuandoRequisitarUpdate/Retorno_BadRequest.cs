@@ -9,11 +9,11 @@ using Xunit;
 
 namespace Api.Application.Test.Usuario.QuandoRequisitarUpdate
 {
-    public class Retorno_Updated
+    public class Retorno_BadRequest
     {
         private UsersController _controller;
 
-        [Fact(DisplayName = "É Possivel Realizar o Update")]
+        [Fact(DisplayName = "É Possivel Realizar o Created")]
         public async Task E_Possivel_Invocar_a_Controller_Update()
         {
             var serviceMock = new Mock<IUserService>();
@@ -31,6 +31,7 @@ namespace Api.Application.Test.Usuario.QuandoRequisitarUpdate
             );
 
             _controller = new UsersController(serviceMock.Object);
+            _controller.ModelState.AddModelError("Email", "É um campo obrigatorio");
 
             var userDtoUpdate = new UserDtoUpdate
             {
@@ -40,13 +41,9 @@ namespace Api.Application.Test.Usuario.QuandoRequisitarUpdate
             };
 
             var result = await _controller.Put(userDtoUpdate);
-            Assert.True(result is OkObjectResult);
 
-            var resultValue = ((OkObjectResult)result).Value as UserDtoUpdateResult;
-            Assert.NotNull(resultValue);
-            Assert.Equal(userDtoUpdate.Name, resultValue.Name);
-            Assert.Equal(userDtoUpdate.Email, resultValue.Email);
-
+            Assert.True(result is BadRequestObjectResult);
+            Assert.False(_controller.ModelState.IsValid);
         }
     }
 }
