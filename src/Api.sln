@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "application", "Api.Application\application.csproj", "{D356CC47-41EE-4B95-8457-AD3D19A77F0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Application", "Api.Application\application.csproj", "{D356CC47-41EE-4B95-8457-AD3D19A77F0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Api.Domain\Domain.csproj", "{B407993A-284E-4949-9308-D4E2A5BA92A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Domain", "Api.Domain\Domain.csproj", "{B407993A-284E-4949-9308-D4E2A5BA92A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "Api.CrossCutting\CrossCutting.csproj", "{9B0229A4-EA1E-4181-BC47-46E6353FE685}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.CrossCutting", "Api.CrossCutting\CrossCutting.csproj", "{9B0229A4-EA1E-4181-BC47-46E6353FE685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Api.Data\Data.csproj", "{78CB02B7-0C14-44BA-AE43-694EC02A1D29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Data", "Api.Data\Data.csproj", "{78CB02B7-0C14-44BA-AE43-694EC02A1D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Api.Service\Service.csproj", "{BE402640-A076-4010-909D-8E9EAFF08A8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Service", "Api.Service\Service.csproj", "{BE402640-A076-4010-909D-8E9EAFF08A8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Data.Test", "Api.Data.Test\Api.Data.Test.csproj", "{6D8757C3-52F8-4152-A039-009172DB7888}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Service.Test", "Api.Service.Test\Api.Service.Test.csproj", "{81C71D71-A230-44B4-8F66-305EE271116A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Application.Test", "Api.Application.Test\Api.Application.Test.csproj", "{E8991851-7B93-40BD-83F4-D586A4965C52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,5 +116,17 @@ Global
 		{81C71D71-A230-44B4-8F66-305EE271116A}.Release|x64.Build.0 = Release|Any CPU
 		{81C71D71-A230-44B4-8F66-305EE271116A}.Release|x86.ActiveCfg = Release|Any CPU
 		{81C71D71-A230-44B4-8F66-305EE271116A}.Release|x86.Build.0 = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|x64.Build.0 = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|x64.Build.0 = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8991851-7B93-40BD-83F4-D586A4965C52}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
